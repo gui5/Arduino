@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/guilherme/arduino-1.8.5/hardware/arduino/avr/cores/arduino",
+                "/home/guilherme/arduino-1.8.5/hardware/arduino/avr/libraries/Wire/src"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "/home/guilherme/arduino-1.8.5/hardware/arduino/avr/cores/arduino",
+                    "${workspaceRoot}",
+                    "/home/guilherme/arduino-1.8.5/hardware/arduino/avr/libraries/Wire/src"
+                ]
+            },
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 3
+}

@@ -1,0 +1,6 @@
+{
+    "sketch": "gps.ino",
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328",
+    "port": "/dev/ttyUSB0"
+}
