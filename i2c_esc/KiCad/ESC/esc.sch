@@ -1,0 +1,427 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:esc-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA328P-AU U1
+U 1 1 5A428485
+P 5550 3450
+F 0 "U1" H 4800 4700 50  0000 L BNN
+F 1 "ATMEGA328P-AU" H 5950 2050 50  0000 L BNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 5550 3450 50  0001 C CIN
+F 3 "" H 5550 3450 50  0001 C CNN
+	1    5550 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper JP1
+U 1 1 5A4284E5
+P 8800 4350
+F 0 "JP1" H 8800 4500 50  0000 C CNN
+F 1 "Jumper" H 8800 4270 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.00mm_SMD_Pin1Left" H 8800 4350 50  0001 C CNN
+F 3 "" H 8800 4350 50  0001 C CNN
+	1    8800 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 5A4285C6
+P 8800 3700
+F 0 "R1" V 8880 3700 50  0000 C CNN
+F 1 "R" V 8800 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 8730 3700 50  0001 C CNN
+F 3 "" H 8800 3700 50  0001 C CNN
+	1    8800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5A42860F
+P 8800 4950
+F 0 "#PWR01" H 8800 4700 50  0001 C CNN
+F 1 "GND" H 8800 4800 50  0000 C CNN
+F 2 "" H 8800 4950 50  0001 C CNN
+F 3 "" H 8800 4950 50  0001 C CNN
+	1    8800 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3850 8800 4050
+Wire Wire Line
+	8800 4950 8800 4650
+$Comp
+L VCC #PWR02
+U 1 1 5A42905C
+P 8800 3350
+F 0 "#PWR02" H 8800 3200 50  0001 C CNN
+F 1 "VCC" H 8800 3500 50  0000 C CNN
+F 2 "" H 8800 3350 50  0001 C CNN
+F 3 "" H 8800 3350 50  0001 C CNN
+	1    8800 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3350 8800 3550
+$Comp
+L Conn_01x03_Male J1
+U 1 1 5A429550
+P 2250 1150
+F 0 "J1" H 2250 1350 50  0000 C CNN
+F 1 "ESC_1" H 2250 950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03_Pitch1.00mm" H 2250 1150 50  0001 C CNN
+F 3 "" H 2250 1150 50  0001 C CNN
+	1    2250 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03_Male J2
+U 1 1 5A429651
+P 2250 1800
+F 0 "J2" H 2250 2000 50  0000 C CNN
+F 1 "ESC_2" H 2250 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03_Pitch1.00mm" H 2250 1800 50  0001 C CNN
+F 3 "" H 2250 1800 50  0001 C CNN
+	1    2250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03_Male J3
+U 1 1 5A429698
+P 2250 2450
+F 0 "J3" H 2250 2650 50  0000 C CNN
+F 1 "ESC_3" H 2250 2250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03_Pitch1.00mm" H 2250 2450 50  0001 C CNN
+F 3 "" H 2250 2450 50  0001 C CNN
+	1    2250 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03_Male J4
+U 1 1 5A4296DF
+P 2250 3200
+F 0 "J4" H 2250 3400 50  0000 C CNN
+F 1 "ESC_4" H 2250 3000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03_Pitch1.00mm" H 2250 3200 50  0001 C CNN
+F 3 "" H 2250 3200 50  0001 C CNN
+	1    2250 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5A429AFE
+P 2700 3450
+F 0 "#PWR03" H 2700 3200 50  0001 C CNN
+F 1 "GND" H 2700 3300 50  0000 C CNN
+F 2 "" H 2700 3450 50  0001 C CNN
+F 3 "" H 2700 3450 50  0001 C CNN
+	1    2700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3300 2700 3300
+Wire Wire Line
+	2700 1250 2700 3450
+Wire Wire Line
+	2450 2550 2700 2550
+Connection ~ 2700 3300
+Wire Wire Line
+	2450 1900 2700 1900
+Connection ~ 2700 2550
+Wire Wire Line
+	2450 1250 2700 1250
+Connection ~ 2700 1900
+Wire Wire Line
+	2450 2350 3500 2350
+Wire Wire Line
+	2450 3100 3550 3100
+Wire Wire Line
+	2450 1700 3500 1700
+Text GLabel 6900 4250 2    39   BiDi ~ 0
+ESC_1_PWM
+Text GLabel 6900 4450 2    39   BiDi ~ 0
+ESC_2_PWM
+Text GLabel 6900 4550 2    39   BiDi ~ 0
+ESC_3_PWM
+Text GLabel 6850 2450 2    39   BiDi ~ 0
+ESC_4_PWM
+Wire Wire Line
+	6550 4250 6900 4250
+Wire Wire Line
+	6550 4450 6900 4450
+Wire Wire Line
+	6550 4550 6900 4550
+Text GLabel 3850 2000 2    39   BiDi ~ 0
+ESC_4_PWM
+Text GLabel 3850 1700 2    39   BiDi ~ 0
+ESC_1_PWM
+Text GLabel 3850 1800 2    39   BiDi ~ 0
+ESC_2_PWM
+Text GLabel 3850 1900 2    39   BiDi ~ 0
+ESC_3_PWM
+Wire Wire Line
+	2450 1050 3550 1050
+Wire Wire Line
+	3550 1050 3550 1700
+Wire Wire Line
+	3550 1700 3850 1700
+Wire Wire Line
+	3500 1700 3500 1800
+Wire Wire Line
+	3500 1800 3850 1800
+Wire Wire Line
+	3500 2350 3500 1900
+Wire Wire Line
+	3500 1900 3850 1900
+Wire Wire Line
+	3550 3100 3550 2000
+Wire Wire Line
+	3550 2000 3850 2000
+$Comp
+L GND #PWR04
+U 1 1 5A42B48B
+P 4500 4750
+F 0 "#PWR04" H 4500 4500 50  0001 C CNN
+F 1 "GND" H 4500 4600 50  0000 C CNN
+F 2 "" H 4500 4750 50  0001 C CNN
+F 3 "" H 4500 4750 50  0001 C CNN
+	1    4500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4750 4500 4450
+Wire Wire Line
+	4500 4450 4650 4450
+Wire Wire Line
+	4500 4550 4650 4550
+Connection ~ 4500 4550
+Wire Wire Line
+	4650 4650 4500 4650
+Connection ~ 4500 4650
+$Comp
+L Conn_01x02 J5
+U 1 1 5A42B98D
+P 7450 3600
+F 0 "J5" H 7450 3700 50  0000 C CNN
+F 1 "I2C_Bus" H 7450 3400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02_Pitch1.00mm" H 7450 3600 50  0001 C CNN
+F 3 "" H 7450 3600 50  0001 C CNN
+	1    7450 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3600 7250 3600
+Wire Wire Line
+	6550 3700 7250 3700
+Wire Wire Line
+	6550 2450 6850 2450
+Wire Wire Line
+	6550 4150 8350 4150
+Wire Wire Line
+	8350 4150 8350 3950
+Wire Wire Line
+	8350 3950 8800 3950
+Connection ~ 8800 3950
+$Comp
+L Conn_02x03_Odd_Even J6
+U 1 1 5A42CE4F
+P 8450 2500
+F 0 "J6" H 8500 2700 50  0000 C CNN
+F 1 "icsp" H 8500 2300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch1.00mm_SMD" H 8450 2500 50  0001 C CNN
+F 3 "" H 8450 2500 50  0001 C CNN
+	1    8450 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2850 7800 2850
+Wire Wire Line
+	6550 2750 7600 2750
+Wire Wire Line
+	9150 2500 8750 2500
+Wire Wire Line
+	9150 2200 9150 2500
+Wire Wire Line
+	6550 3800 7000 3800
+$Comp
+L VCC #PWR05
+U 1 1 5A42D1C1
+P 8950 2100
+F 0 "#PWR05" H 8950 1950 50  0001 C CNN
+F 1 "VCC" H 8950 2250 50  0000 C CNN
+F 2 "" H 8950 2100 50  0001 C CNN
+F 3 "" H 8950 2100 50  0001 C CNN
+	1    8950 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2400 8950 2400
+Wire Wire Line
+	8950 2400 8950 2100
+$Comp
+L GND #PWR06
+U 1 1 5A42D221
+P 8950 2750
+F 0 "#PWR06" H 8950 2500 50  0001 C CNN
+F 1 "GND" H 8950 2600 50  0000 C CNN
+F 2 "" H 8950 2750 50  0001 C CNN
+F 3 "" H 8950 2750 50  0001 C CNN
+	1    8950 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2600 8950 2600
+Wire Wire Line
+	8950 2600 8950 2750
+$Comp
+L VCC #PWR07
+U 1 1 5A42DE87
+P 4500 2200
+F 0 "#PWR07" H 4500 2050 50  0001 C CNN
+F 1 "VCC" H 4500 2350 50  0000 C CNN
+F 2 "" H 4500 2200 50  0001 C CNN
+F 3 "" H 4500 2200 50  0001 C CNN
+	1    4500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2200 4500 2650
+Wire Wire Line
+	4500 2450 4650 2450
+Wire Wire Line
+	4650 2350 4500 2350
+Connection ~ 4500 2350
+$Comp
+L Crystal_GND3 Y1
+U 1 1 5A42DFEB
+P 8250 3350
+F 0 "Y1" H 8250 3575 50  0000 C CNN
+F 1 "Crystal_GND3" H 8250 3500 50  0000 C CNN
+F 2 "Crystals:Crystal_SMD_0603-2pin_6.0x3.5mm" H 8250 3350 50  0001 C CNN
+F 3 "" H 8250 3350 50  0001 C CNN
+	1    8250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 2600 8250 2600
+Wire Wire Line
+	7600 2750 7600 2400
+Wire Wire Line
+	7600 2400 8250 2400
+Wire Wire Line
+	7800 2850 7800 2500
+Wire Wire Line
+	7800 2500 8250 2500
+Wire Wire Line
+	6550 2650 7500 2650
+Wire Wire Line
+	7500 2650 7500 2200
+Wire Wire Line
+	7500 2200 9150 2200
+Wire Wire Line
+	7000 3800 7000 3200
+Wire Wire Line
+	7000 3200 7900 3200
+Wire Wire Line
+	7900 3200 7900 2600
+Wire Wire Line
+	6550 2950 8550 2950
+Wire Wire Line
+	7400 3350 8100 3350
+Wire Wire Line
+	8550 2950 8550 3350
+Wire Wire Line
+	8550 3350 8400 3350
+Wire Wire Line
+	6550 3050 7400 3050
+Wire Wire Line
+	7400 3050 7400 3350
+$Comp
+L GND #PWR08
+U 1 1 5A42E606
+P 8250 3700
+F 0 "#PWR08" H 8250 3450 50  0001 C CNN
+F 1 "GND" H 8250 3550 50  0000 C CNN
+F 2 "" H 8250 3700 50  0001 C CNN
+F 3 "" H 8250 3700 50  0001 C CNN
+	1    8250 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3700 8250 3550
+$Comp
+L C C1
+U 1 1 5A4370CD
+P 3950 3300
+F 0 "C1" H 3975 3400 50  0000 L CNN
+F 1 "C" H 3975 3200 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_EuroQuartz_EQ161-2pin_3.2x1.5mm" H 3988 3150 50  0001 C CNN
+F 3 "" H 3950 3300 50  0001 C CNN
+	1    3950 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3150 3950 2950
+Wire Wire Line
+	3950 2950 4650 2950
+$Comp
+L GND #PWR09
+U 1 1 5A4372D8
+P 3950 3550
+F 0 "#PWR09" H 3950 3300 50  0001 C CNN
+F 1 "GND" H 3950 3400 50  0000 C CNN
+F 2 "" H 3950 3550 50  0001 C CNN
+F 3 "" H 3950 3550 50  0001 C CNN
+	1    3950 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3550 3950 3450
+Wire Wire Line
+	4500 2650 4650 2650
+Connection ~ 4500 2450
+$EndSCHEMATC
