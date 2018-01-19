@@ -12,6 +12,9 @@
 #define ESC_3_PIN   (6)
 #define ESC_4_PIN   (9)
 
+#define ESC_MAX_US  (2000)
+#define ESC_MIN_US  (1000)
+
 /*
     1 = true
     0 = false
@@ -45,13 +48,13 @@ enum BIT_MASK
 //reguster map enum
 enum class REG_MAP
 {
-    STATUS, //read only
-    ESC_1_THROTTLE,
-    ESC_2_THROTTLE,
-    ESC_3_THROTTLE,
-    ESC_4_THROTTLE,
-    MODE,
-    CONFIG,
+    STATUS, //read only //0
+    ESC_1_THROTTLE,     //1
+    ESC_2_THROTTLE,     //2
+    ESC_3_THROTTLE,     //3
+    ESC_4_THROTTLE,     //4
+    MODE,               //5
+    CONFIG,             //6
     IDENTIFICATION //read only
 };
 
@@ -63,6 +66,7 @@ enum RCV_BYTE
     EXTRA
 };
 
+//variables - global
 byte registerMap[REG_MAP_SZ];
 byte receivedCommands[MAX_SENT_BYTES];
 bool updateEsc[4];
@@ -75,10 +79,10 @@ void setThrottle(byte esc, byte value);
 int getSpeed(byte value);
 void calEsc();
 
-ESC Esc1(ESC_1_PIN,1000,2000,500);
-ESC Esc2(ESC_2_PIN,1000,2000,500);
-ESC Esc3(ESC_3_PIN,1000,2000,500);
-ESC Esc4(ESC_4_PIN,1000.2000,500);
+ESC Esc1(ESC_1_PIN,ESC_MIN_US,ESC_MAX_US,500);
+ESC Esc2(ESC_2_PIN,ESC_MIN_US,ESC_MAX_US,500);
+ESC Esc3(ESC_3_PIN,ESC_MIN_US,ESC_MAX_US,500);
+ESC Esc4(ESC_4_PIN,ESC_MIN_US,ESC_MAX_US,500);
 
 void setup()
 {
@@ -94,7 +98,7 @@ void setup()
 
     Serial.begin(115200); //debug
 
-    delay(1000);
+    delay(1000); 
 
     Serial.print("ESC control module, address: 0x");
     Serial.println(I2C_ADDRESS,HEX);
